@@ -1,4 +1,10 @@
-export default function ProductCard({ product }) {
+import Link from "next/link";
+
+export default function ProductCard({
+  product,
+  onEdit,
+  onDelete,
+}) {
   return (
     <div className="rounded-xl border bg-white p-4 shadow-sm">
       <img
@@ -8,9 +14,12 @@ export default function ProductCard({ product }) {
       />
 
       <div className="mt-4">
-        <h2 className="font-semibold">
+        <Link
+          href={`/products/${product.id}`}
+          className="font-semibold hover:underline"
+        >
           {product.title}
-        </h2>
+        </Link>
 
         <p className="mt-1 text-sm capitalize text-gray-500">
           {product.category}
@@ -29,6 +38,23 @@ export default function ProductCard({ product }) {
         <p className="mt-2 text-sm text-gray-600">
           Stock: {product.stock}
         </p>
+
+        {/* Actions */}
+        <div className="mt-4 flex gap-2">
+          <button
+            onClick={() => onEdit(product)}
+            className="flex-1 rounded-lg border px-3 py-2 text-sm"
+          >
+            Edit
+          </button>
+
+          <button
+            onClick={() => onDelete(product.id)}
+            className="flex-1 rounded-lg border px-3 py-2 text-sm text-red-600"
+          >
+            Delete
+          </button>
+        </div>
       </div>
     </div>
   );
