@@ -34,6 +34,11 @@ Tailwind CSS, Axios, and DummyJSON API.
 - Empty state
 - URL state preservation
 
+## UI/UX Improvements
+
+- Added a polished SaaS-style dashboard layout with responsive product tables and mobile cards.
+- Improved search, filter, sort, pagination, forms, login, product details, and feedback states with consistent spacing, typography, focus states, and action styling.
+
 ## Login Credentials
 
 Username:
@@ -107,6 +112,4 @@ http://localhost:3000
 
 ## AI_Usage
 
-AI was used for implementation guidance, debugging assistance, and
-code explanations during development. The implemented code was
-reviewed and understood before submission and enhanced the ui of application
+- AI was used for implementation guidance, debugging assistance, and code explanations during development. The implemented code was reviewed and understood before submission and enhanced the ui/ux of application
